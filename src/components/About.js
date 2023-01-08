@@ -7,7 +7,7 @@ export default function About(props) {
                 <div className="card">
                     <div className="card-header" id="headingOne" style={{ backgroundColor: props.mode === 'dark' ? '#042743' : '#e4e4f1' }}>
                         <h2 className="mb-0">
-                            <button className="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
+                            <button className="btn btn-link btn-block text-left text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
                                 What special in TextUtils
                             </button>
                         </h2>
@@ -22,7 +22,7 @@ export default function About(props) {
                 <div className="card">
                     <div className="card-header" id="headingTwo" style={{ backgroundColor: props.mode === 'dark' ? '#042743' : '#e4e4f1' }}>
                         <h2 className="mb-0">
-                            <button className="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
+                            <button className="btn btn-link btn-block text-left collapsed text-decoration-none " type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
                                 What special in TextUtils
                             </button>
                         </h2>
@@ -37,7 +37,7 @@ export default function About(props) {
                 <div className="card">
                     <div className="card-header" id="headingThree" style={{ backgroundColor: props.mode === 'dark' ? '#042743' : '#e4e4f1' }}>
                         <h2 className="mb-0">
-                            <button className="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
+                            <button className="btn btn-link btn-block text-left collapsed text-decoration-none" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style={{color: props.mode === 'dark' ? 'white' : 'blue'}}>
                                 What special in TextUtils
                             </button>
                         </h2>
