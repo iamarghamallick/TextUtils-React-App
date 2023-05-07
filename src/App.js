@@ -14,7 +14,8 @@ function App() {
   useEffect(() => {
     return () => {
       let savedMode = localStorage.getItem('mode');
-      if(savedMode){
+      console.log(savedMode);
+      if(savedMode != null){
         setMode(savedMode);
         if(savedMode === 'dark') document.body.style.backgroundColor = '#042743';
         if(savedMode === 'light') document.body.style.backgroundColor = 'white';
