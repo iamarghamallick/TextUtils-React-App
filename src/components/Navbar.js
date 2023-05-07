@@ -20,8 +20,8 @@ function Navbar(props) {
                             <Link className="nav-link" to="/about">About</Link>
                         </li>
                     </ul>
-                    <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'} px-0`}>
-                        <label className="form-check-label" htmlFor="flexSwitchCheckDefault" role="button" onClick={props.toggleMode}>Enable {props.mode === 'dark' ? 'Light Mode' : 'Dark Mode'}</label>
+                    <div>
+                        <i className="fa fa-moon-o" style={{"color":"blue", "border":"2px solid blue", "borderRadius":"50%", "padding":"5px","cursor":"pointer"}} onClick={props.toggleMode}></i>
                     </div>
                 </div>
             </nav>

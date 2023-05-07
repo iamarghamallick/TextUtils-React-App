@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
 import {
@@ -11,7 +11,21 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [mode, setMode] = useState('light'); // Whether dark mode is enabled or not
+  useEffect(() => {
+    return () => {
+      let savedMode = localStorage.getItem('mode');
+      if(savedMode){
+        setMode(savedMode);
+        if(savedMode === 'dark') document.body.style.backgroundColor = '#042743';
+        if(savedMode === 'light') document.body.style.backgroundColor = 'white';
+      } else {
+        setMode('light');
+        document.body.style.backgroundColor = 'white';
+      }
+    }
+  }, [])
+  
+  const [mode, setMode] = useState('dark'); // Whether dark mode is enabled or not
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
@@ -29,11 +43,13 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showAlert("Dark mode enabled!", "success");
+      localStorage.setItem("mode", "dark");
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode enabled!", "success");
+      localStorage.setItem("mode", "light");
     }
   }
 
